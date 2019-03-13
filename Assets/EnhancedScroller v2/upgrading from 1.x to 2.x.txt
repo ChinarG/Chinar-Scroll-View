@@ -1,0 +1,13 @@
+There have been significant changes in the EnhancedCScrollView in version 2.
+
+Please go through the Quick Start tutorial to see how to set up the new CScrollView.
+
+Some changes:
+
+1) The CScrollView no longer requires the data to be passed to it. It is completely unaware of the underlying data, instead relying on a delegate script to give it the information it needs. You no longer have to have your list as a set of objects. This allows a more flexible model and better separation of concerns for a true MVC solution. The delegate provides the unit sizes, the number of units, and the unit view to display for a given data index.
+2) Setup of the CScrollView in the scene is much simpler now. You don't need to worry about anchors and pivots as much. You also don't need to set up much on the Scroll Rect component as that is handled automatically for you at scene start. 
+3) The CScrollView can handle more than one type of unit prefab. The CScrollView will recycle the correct type as long as your unit identifiers are unique.
+4) Unit spacing and CScrollView padding have been added.
+5) More robust SmallList class that can be used in your project on things other than just the CScrollView. The SmallList is memory friendly, not releasing memory to the garbage collector.
+6) Three new demos to get your creative ideas flowing.
+7) Internal improvements to memory usage and speed, as well as some bug fixes from 1.x.
